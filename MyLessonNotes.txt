@@ -1,0 +1,7 @@
+Data mızı yöneten yerimiz app.component.ts tir
+süslü parantez '{ }' demek javascriptte obje demektir.
+./ => aynı dizinde (klasörde) olgunu belirtir.
+selector yapısı html kısmında sanki bir html tag i gibi kullanabilecegi yetksini verebilir
+köşeli parantez javascriptte array anlamına gelmektedir
+component i kullanabilmek için @angular/core den import etmemiz lazım
+!!Yeni bir paket yükledikten sonra projeyi durdurup yeniden yayına almalıyız
