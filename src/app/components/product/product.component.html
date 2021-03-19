@@ -1,19 +1,22 @@
-<table class="table">
+<div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<!--table -->
+<table *ngIf="dataLoaded!=false" class="table">
   <tr>
-    <th>ProductId</th>
-    <th>CategoryId</th>
-    <th>ProductName</th>
-    <th>QuantityPerUnit</th>
-    <th>UnitsInStock</th>
-    <th>UnitPrice</th>
+    <th>Ürün Id</th>
+    <th>Kategori</th>
+    <th>Ürün Adı</th>
+    <th>Özellikler</th>
+    <th>Stok Adedi</th>
+    <th>Fiyat</th>
   </tr>
   <tr *ngFor="let product of products">
     <td>{{ product.productId }}</td>
     <td>{{ product.categoryId }}</td>
     <td>{{ product.productName }}</td>
     <td>{{ product.quantityPerUnit }}</td>
-    <td>{{ product.unitsInStock }} pcs</td>
-    <td>{{ product.unitPrice }} $</td>
-
+    <td>{{ product.unitsInStock }}</td>
+    <td>{{ product.unitPrice }} ₺</td>
   </tr>
 </table>

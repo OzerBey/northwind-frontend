@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http'; //bununla birlikte backende istekte bulunabiliyoruz
 import { ProductResponseModel } from 'src/app/models/productResponseModel';
 import { Product } from 'src/app/models/product';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-product',
@@ -10,8 +10,9 @@ import { Product } from 'src/app/models/product';
 })
 export class ProductComponent implements OnInit {
   products: Product[] = [];
-  apiUrl = 'http://localhost:50630/api/products/getall';
-  constructor(private httpClient: HttpClient) {}
+  dataLoaded = false;
+
+  constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
     console.log('Init çalıştı');
@@ -19,10 +20,10 @@ export class ProductComponent implements OnInit {
   }
 
   getProducts() {
-    this.httpClient
-      .get<ProductResponseModel>(this.apiUrl) //apiUrl 'den gelen datayı ProductResponseModel e map edecegini belirtiyoruz
-      .subscribe((response) => {
-        this.products = response.data;
-      });
+    //getProducts() = Observable döner bu observable demek buraya subscribe olabilririz anlamına gelir
+    this.productService.getProducts().subscribe((response) => {
+      this.products = response.data;
+      this.dataLoaded = true;//yüklendigi anda onu true hale getiriyoruz
+    });
   }
 }

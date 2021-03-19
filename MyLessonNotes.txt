@@ -5,3 +5,5 @@ selector yapısı html kısmında sanki bir html tag i gibi kullanabilecegi yetk
 köşeli parantez javascriptte array anlamına gelmektedir
 component i kullanabilmek için @angular/core den import etmemiz lazım
 !!Yeni bir paket yükledikten sonra projeyi durdurup yeniden yayına almalıyız
+Bir component httpClienti kullanmaz
+!Observable döner bu observable demek buraya subscribe olabilririz anlamına gelir
