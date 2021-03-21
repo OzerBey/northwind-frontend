@@ -7,3 +7,4 @@ component i kullanabilmek için @angular/core den import etmemiz lazım
 !!Yeni bir paket yükledikten sonra projeyi durdurup yeniden yayına almalıyız
 Bir component httpClienti kullanmaz
 !Observable döner bu observable demek buraya subscribe olabilririz anlamına gelir
+[class]="list-group-item active"> => componentteki bir bilgi ile (metoda göre) classı degiştirmek istiyorsak [class] kullanrız 
