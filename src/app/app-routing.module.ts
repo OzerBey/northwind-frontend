@@ -9,6 +9,7 @@ const routes: Routes = [
     component: ProductComponent,
   },
   { path: 'products', component: ProductComponent },
+  { path: 'products/category/:categoryId', component: ProductComponent }, //: categoryId Id ile degerler gelecek demektir
 ];
 
 @NgModule({
